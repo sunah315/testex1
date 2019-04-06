@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>테이블 태그</title>
     <style>
-        table, th, td {
-            border:1px solid gray;  /* 표의 테두리 - 1px 회색 실선 */
-            border-collapse:collapse;  /* 표 테두리와 셀 테두리 합치기 */
+        table,
+        th,
+        td {
+            border: 1px solid gray;
+            /* 표의 테두리 - 1px 회색 실선 */
+            border-collapse: collapse;
+            /* 표 테두리와 셀 테두리 합치기 */
         }
-        td { width: 100px; }
+
+        td {
+            width: 100px;
+        }
     </style>
 </head>
+
 <body>
 
     <pre>
@@ -36,22 +45,49 @@
     </pre>
 
     <h2>테이블 태그 실습</h2>
-     
+
     <!-- 테이블 만들기-->
 
-        <!-- 3. 컬럼 설정         : colgroup , col -->
-        <!-- 컬럼 너비 설정 할 때 사용.-->
+    <!-- 3. 컬럼 설정         : colgroup , col -->
+    <!-- 컬럼 너비 설정 할 때 사용.-->
 
-        <!-- 2. table header 설정 : thead , tr, th  -->
-        <!-- 표의 컬럼명 표시할 때 사용 -->
+    <!-- 2. table header 설정 : thead , tr, th  -->
+    <!-- 표의 컬럼명 표시할 때 사용 -->
 
-        <!-- 1. table body 설정   : tbody , tr, td.  -->
-        <!-- 표의 데이터를 표시할 때 사용 -->
+    <!-- 1. table body 설정   : tbody , tr, td.  -->
+    <!-- 표의 데이터를 표시할 때 사용 -->
 
-        <!-- 4. table footer 설정 : tfoot, tr, td -->
-        <!-- 표의 요약을 표시할 때 사용 -->
+    <!-- 4. table footer 설정 : tfoot, tr, td -->
+    <!-- 표의 요약을 표시할 때 사용 -->
+
+    <table>
+        <thead>
+        <tr><!-- 열 제목용 행 만들기 -->
+            <th></th>
+            <th>1열</th>
+            <th>2열</th>
+            <th>3열</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr><!-- 1행 만들기 -->
+            <th>1행</th>
+            <td colspan="2">1행 1열</td>
+            <td>1행 3열</td>
+        </tr>
+        <tr><!-- 2행 만들기 -->
+            <th>2행</th>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+            <td rowspan="2">2행 3열</td>
+        </tr>
+        <tr><!-- 3행 만들기 -->
+            <th>3행</th>
+            <td>3행 1열</td>
+            <td>3행 2열</td>
+        </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>
-
-
-
