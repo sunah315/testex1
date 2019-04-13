@@ -1,0 +1,16 @@
+<bookstore>
+    <book category="">
+        <title lang = "">
+            SOA, What & How
+        </title>
+        <author>
+            전병선
+        </author>
+        <year>
+            2008
+        </year>
+        <price>
+            27000
+        </price>
+    </book>
+</bookstore>
