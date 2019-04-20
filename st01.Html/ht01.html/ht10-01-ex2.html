@@ -11,17 +11,21 @@
 
         header {
             border: 1px dotted orange;
+            height: 150px;
         }
 
         nav {
             border: 1px dotted gray;
             margin: 30px;
+            height: 70px;
         }
 
         article {
             border: 1px dotted lightblue;
             display: inline-block;
             width: 75%;
+            height: 300px;
+            float: left;
         }
 
         aside {
@@ -29,6 +33,7 @@
             display: inline-block;
             width: 22%;
             float: right;
+            height: 300px
         }
 
         footer {
@@ -38,5 +43,11 @@
 </head>
 
 <body>
+    <header><legend>HEADER</legend><nav align="center">nav</nav></header>
+        <div>
+                <article><legend>ARTICLE</legend><figure align="center">figure</figure></article>
+                <aside><legend>ASIDE</legend></aside>
+        </div>
+    <footer><legend>FOOTER</legend></footer>
 </body>
 </html>
