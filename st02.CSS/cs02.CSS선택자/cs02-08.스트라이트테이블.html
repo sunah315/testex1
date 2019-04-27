@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>반응 선택자: 스트라이프 테이블 만들기</title>
+    <style>
+        tbody>tr:nth-child(even) { background-color: lightcoral; }
+        tbody>tr:nth-child(odd) { background-color: lightgray; }
+        thead>tr { color : white; background-color : black; }
+        tbody>tr:hover { background-color: lightblue !important; }
+    </style>
 </head>
 <body>
     <pre>    
