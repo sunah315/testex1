@@ -4,9 +4,53 @@
     <meta charset="utf-8">
     <title>HTML5 Basic Page</title>
     <style>
-        .input-search { border-top-left-radius: 10px ; border-bottom-left-radius: 10px ; float: left; }
-        .input-search-submit {border-top-right-radius: 10px ; border-bottom-right-radius: 10px ; float: left; }
-        #main-navigation>.pull-right::after {clear:both; display:block; content:'';}
+        /*검색창 공통 사항*/
+        input {margin:3px; padding:0px; }
+        .input-search, .input-search-submit {border : 1px solid grey; float: left; }
+        .input-search, .input-search-submit:focus {outline:0px;}
+
+        /*검색창 설정*/
+        .input-search { border-radius: 20px 0 0 20px;  height:30px; width:150px; padding-left:15px;}
+        .input-search-submit {border-radius: 0 20px 20px 0;  height:32px; width:50px; margin-left:-10px;}
+        .search-bar::after {clear:both; display:block; content:'';}
+        .input-search-submit:active {box-shadow: 2px 2px 2px grey inset;}
+
+        /*상단 메뉴 설정*/
+        .outer-menu {list-style-type:none; margin-top:0px; vertical-align:top;}
+        .outer-menu-item {display:inline-block; padding-top:10px; vertical-align:top; width:110px;}
+        .search-bar {float:right; vertical-align:top; padding-top:0px;}
+        #main-navigation > .pull-left .outer-menu-item {position : relative;}
+        #main-navigation {display:inline-block; width:100%; height:40px; border-top: 1px solid black; border-bottom: 1px solid black; margin:0 0 20px 0;}
+
+        /*메뉴에 마우스 올리면 검정색으로 변하게 하기*/
+        .outer-menu-item:hover {background-color:black; color:white;}
+        .outer-menu-item > .menu-title {display:block; height:30px; text-align:center; padding: 0 20px 0 20px; width:110px;}
+
+        /*서브 메뉴 설정*/
+        .outer-menu-item > .inner-menu {background-color:whitesmoke; text-align:center; width:100%; position:absolute; top:40px; left:0;}
+
+        /*section 나누기*/
+        #main-section {float:left; width:80%;}
+        #main-asdie {float:left; width:20%;}
+        
+        /*h1, h1 글씨 설정*/
+        h2.master-description {font-size:15px; font-style: normal; vertical-align:top; margin-top:0px;}
+        h1.master-title {margin-bottom: 0px;}
+
+        /*float clear 설정*/
+        #content::after {clear:both; display:block; content:'';}
+
+        /*navigation 나누기*/
+        #main-navigation > .pull-left {float:left;}
+        #main-navigation > .pull-right {float:right;}
+
+        /*list style 설정*/
+        li {list-style-type:none;}
+
+        /*body와 page wrapper 설정*/
+        body {width:960px; margin: 0 auto; background-color: #e6e6e6;}
+        #page-wrapper {background-color: white; margin: 40px 0 40px 0; padding:10px 20px 10px 20px; border-radius:10px;}
+
     </style>
 </head>
 <body>
@@ -50,7 +94,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="pull-right">
+            <div class="pull-right" >
                 <div class="search-bar">
                     <form>
                         <input type="text" class="input-search" />
@@ -79,17 +123,18 @@
             <aside id="main-aside">
                 <div class="aside-list">
                     <h3>카테고리</h3>
-                    <ul>
+                    <ul class="outer-menu">
                         <li><a href="#">데이터</a></li>
                         <li><a href="#">데이터</a></li>
                         <li><a href="#">데이터</a></li>
                         <li><a href="#">데이터</a></li>
                         <li><a href="#">데이터</a></li>
                     </ul>
+                <br>
                 </div>
                 <div class="aside-list">
                     <h3>최근 글</h3>
-                    <ul>
+                    <ul class="outer-menu">
                         <li><a href="#">데이터</a></li>
                         <li><a href="#">데이터</a></li>
                         <li><a href="#">데이터</a></li>
@@ -99,6 +144,7 @@
             </aside>
         </div>
         <footer id="main-footer">
+            <hr/>
             <a href="#">Created By Team-HeXagon</a>
         </footer>
     </div>
