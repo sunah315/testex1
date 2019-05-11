@@ -4,6 +4,28 @@
 <head>
     <meta charset="utf-8">
     <title>Head First Lounge</title>
+    <style>
+    /*오른쪽에 배치*/
+
+    #elixirs {border : 1px solid cadetblue; float:right; width:30%; text-align:center;
+              background-image:url(./images/cocktail.gif); background-position: top; background-repeat: no-repeat;}
+    #elixirs::after {clear:both; display:block; content:'';}
+    #a {width:calc(70% - 2px);}
+
+    /*배경 이미지 위치*/
+    #guarantee {background-color:cadetblue; background-image : url(./images/background.gif); background-repeat: no-repeat; 
+                background-size:inherit; padding:20px 20px 20px 80px; }
+
+    /*bold 처리*/
+    .artist {font-weight : bold;}
+    .cd {font-style:italic;}
+
+    /*가운데 정렬*/
+    #footer {text-align : center;}
+
+    h1, h2 {color:cadetblue;}
+    h3 {color:red; font-weight:bold;}
+    </style>
 </head>
 
 <body>
@@ -50,6 +72,7 @@
         </p>
     </div>
 
+    <div id="a">
     <h1>Welcome to the Head First Lounge</h1>
     <p>
         The Head First Lounge is, no doubt, the biggest trendsetter in Webville.
@@ -109,6 +132,7 @@
         <li><span class="cd">Le Roi Est Mort, Vive Le Roi!</span>, <span class="artist">Enigma</span></li>
         <li><span class="cd">Music for Airports</span>, <span class="artist">Brian Eno</span></li>
     </ul>
+    </div>
 
     <div id="footer">
         <p>

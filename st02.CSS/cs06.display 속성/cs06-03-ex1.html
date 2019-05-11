@@ -3,6 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>display 속성</title>
+    <style>
+        .ex1, .ex2, .ex3 {border:2px solid black; width:200px; height:200px; margin:10px;background-color: seagreen;}
+        /* {display:inline-block;}도 가능하다.*/
+        #container {display:flex; flex-direction:row;}
+        /*flex는 적용될 태그의 부모 태그에 설정, display는 본인, 즉 적용되는 태그에게 설정*/
+    </style>
 </head>
 <body>
     <div id="container">
@@ -11,4 +17,4 @@
         <div class="ex3">세번째</div>
     </div>
 </body>
-</html>
+</html>

@@ -4,8 +4,25 @@
     <meta charset="utf-8" />
     <title>HTML5 기초 문서</title>
     <style>
-        
+    * {margin: 0; padding:0; font-family:"맑은 고딕"; color:white;}
+    h1, h2 {color:#396ff7;}
+
+    /* 꽉찬 페이지 배경 설정 고려해야 할 것들
+    1. 이미지 경로
+    2. 이미지 반복 여부
+    3. 이미지 사이즈 (cover가 자동 넓히기)
+    4. 이미지 스크롤 여부(fixed or scroll)
+    5. min-width, min-height(꽉차게 하려면 100%) 
+
+    외부 링크 사용시에는 <link rel="stylesheet" href="bg.css">
+
+    */
+body {background-image: url(./images/bg.jpg); background-repeat:no-repeat; background-size:cover; background-attachment: scroll;
+          min-width:100%; min-height:100%;}
+
     </style>
+
+
 </head>
 <body>
     <h1>body 섹션(section) 제목</h1>

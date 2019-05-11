@@ -3,6 +3,14 @@
     <head>
         <meta charset="utf-8">
         <title>display 속성</title>
+        <style>
+            #inlineblock li {list-style-type: none; list-style: none; display:inline-block; width:150px;}
+            #inlineblock a {color:white; text-decoration: none;}
+            #inlineblock {background-color:mediumaquamarine; height:50px; line-height:50px;}
+            #inline, #block {border:1px solid slategray; border-radius:10px; margin:10px 0; padding:20px;}
+            #inline > img {vertical-align: top;} /*inline 밑에 있는 img들을 위로 올림*/
+            #block > img {display:block;}
+        </style>
     </head>
     <body>
         <h2>display 속성</h2>
@@ -29,4 +37,4 @@
             <img src="../images/pic3.jpg">
         </div>
     </body>
-</html>
+</html>
