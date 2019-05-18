@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>레이아웃 C</title>
+    <style>
+    #wrap {width:500px;}
+    #header {background-color:lightgreen; height:50px;}
+    #leftbar {float:left; background-color:pink; width:40%; height:300px;}
+    #content {float:left; background-color:purple; width:60%; height:300px;}
+    #wrapbody::after {clear:both; display:block; content:'';}
+    #footer {background-color:lightsalmon; height:50px; width:500px;}
+    </style>
 </head>
 
 <body>
@@ -30,4 +38,4 @@
     </div>
 
 </body>
-</html>
+</html>

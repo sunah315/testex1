@@ -3,6 +3,14 @@
 <head>
     <meta charset="utf-8">
     <title>박스모델</title>
+    <style>
+    * {margin:10px;}
+    .box1 {height:100px; width:100px; background-color:yellow; text-align:center; line-height:100px; float:left;}
+    .box2 {height:100px; width:100px; background-color:lightblue; text-align:center; line-height:100px; float:left;}
+    .box2::after {clear:both; display:block; content:'';}
+    .box3 {height:100px; background-color:greenyellow; text-align:center; line-height:100px;}
+    .box4 {height:100px; background-color:purple; text-align:center; line-height:100px;}
+    </style>
 </head>
 <body>
     <div class="box1">박스1</div>

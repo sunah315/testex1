@@ -4,6 +4,15 @@
 <head>
     <meta charset="utf-8">
     <title>2단 레이아웃</title>
+    <style>
+    * {margin:10px; padding:10px;}
+    #header, #contents, #sidebar, #footer {border:1px solid black;}
+    #contents {float:left; width:calc(100% - 400px); height:100%;}
+    #sidebar {float:right; width:300px; height:100%; background-color:lightgray}
+    #sidebar li  {list-style-type:none;}
+    #footer {clear:both; display:block; content:'';}
+    #container {height:fit-content;}
+    </style>
 </head>
 <body>
     <div id="container">
@@ -29,4 +38,4 @@
         </div>
     </div>
 </body>
-</html>
+</html>

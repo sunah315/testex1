@@ -3,6 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>CSS 선택자</title>
+    <style>
+    nav {border:1px solid black;}
+    nav>ul>li {display:inline-block; color:black; margin:0 10px 0 0; text-decoration-line:none;}
+    a {text-decoration:none;}
+    nav>ul>li:visited {color:black;}
+    a:active {color:blue;}
+    </style>
 </head>
 <body>
     <nav class="main-menu">
@@ -13,4 +20,4 @@
         </ul>
     </nav>
 </body>
-</html>
+</html>

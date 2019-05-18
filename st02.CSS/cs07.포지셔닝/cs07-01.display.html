@@ -4,6 +4,14 @@
     <meta charset="utf-8">
     <title>박스모델</title>
     <style type="text/css">
+    div {width:100px; height:100px; display:inline-block; text-align:center; line-height:100px;}
+    div.box1 {background-color:orange;}
+    div.box2 {background-color:lightskyblue;}
+    div.box3 {background-color:greenyellow;}
+    div.box4 {background-color:white; border:1px solid black; float:right;}
+    div.box4::after {clear:both; display:block; content:'';}
+    div.box5 {background-color:white; border:1px solid black;}
+    </style>
 </head>
 <body>
     <div class="box1">박스1</div>
@@ -12,4 +20,4 @@
     <div class="box4">박스4</div>
     <div class="box5">박스5</div>
 </body>
-</html>
+</html>
