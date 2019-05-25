@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>레이아웃 A ::: Auto stretch content's height</title>
+    <style>
+        * {margin:0; padding:0;} 
+        html, body {height:100%;} /*부모의 높이를 주면 자식의 높이를 줄 있음, 높이가 꽉 찬 화면 만들기*/
+        #wrap {height:100%;}
+        #header {border:1px red solid; height:50px; box-sizing:border-box;}
+        #content {border:1px gold solid; height:calc(100% - 100px); box-sizing:border-box;} /*calc에서 -를 사용할 때는 앞뒤로 한 칸 띄우기*/
+                    /*height:calc(100% - 100px - 6px); 6px를 빼지 않으면 border로 인해서(안에서 바깥쪽으로 생기는 형태) 스크롤이 생김*/
+                    /*height:calc(100% - 100px); box-sizing:border-box;으로 변경하면 바깥쪽에서 안으로 형성되어 border, padding 계산이 필요없다*/
+        #footer {border:1px blue solid; height:50px; box-sizing:border-box;}
+    </style>
 </head>
 <body>
     <div id="wrap">
@@ -20,4 +30,4 @@
     </div>
 </body>
 
-</html>
+</html>

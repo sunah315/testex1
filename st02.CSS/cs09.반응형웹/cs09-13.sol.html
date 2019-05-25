@@ -2,7 +2,40 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>연습문제</title>
+    <style>
+        * {padding:0; margin:0;} /*CSS 초기화*/
+        #wrapper {margin:0 auto;} /*수평 정렬*/
+        #img-box >div {height:100px; float:left;}
+        .img1 {background-color:orange;} /*box와 img1 둘 다 class이기 때문에 하나만 써도 된다.*/
+        .img2 {background-color:lightblue;}
+        .img3 {background-color:lightcoral;}
+        .img4 {background-color:lightgreen;}
+
+        /* 1024px 이상 한 행에 4개가 나오게 작성*/
+        #wrapper {width:1024px;}
+        #img-box > div.box {width:22%; margin:0.5%; box-sizing:border-box;}
+
+        /*480px이하에는 행 숨기기*/
+        @media screen and (max-width:480px) {
+            #img-box > div.box {display:none;}
+        }
+        @media screen and (min-width:480px) and (max-width:768px) {
+            /*한 행에 한 개만 나오게*/
+            #wrapper {width:480px;}
+            #img-box {width:100%;}
+            #img-box > div.box {clear:both; width:100%; margin:10px; box-sizing:border-box;} /*위에서 float를 먹었으니 지우는 작업을 해야 함*/
+        }
+        @media screen and (min-width:768px) and (max-width:1024px) {
+            /*한 행에 두 개만 나오게*/
+            #wrapper {width:768px;}
+            #img-box {display:flex; flex-direction:row; flex-wrap:wrap; width:100%;} /*여러 행에 나오게 함*/
+            #img-box > div.box {width:48%; margin:0.5%; box-sizing:border-box;}
+        }
+        @media screen and (min-width:1024px) {}
+
+    </style>
 </head>
 
 <body>

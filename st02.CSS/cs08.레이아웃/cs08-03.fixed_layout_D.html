@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>레이아웃 C1</title>
-    <style>
-    #wrap {width:500px;}
-    #header {background-color:lightgreen; height:50px;}
-    #footer {background-color:powderblue; height:50px; width:500px;}
-    #leftbar {float:left; background-color:pink; width:30%; height:300px;}
-    #content {float:left; background-color:purple; width:40%; height:300px;}
-    #rightbar {float:left; background-color:pink; width:30%; height:300px;}
-    #rightbar::after {clear:both; display:block; content:'';}
+    <style>    
+    #header {background-color:lightgreen; height:50px; box-sizing: border-box;}
+    #leftbar {float:left; background-color:pink; height:100px; width:20%; box-sizing: border-box;}
+    #content {float:left; background-color:purple; height:100px; width:60%; box-sizing: border-box;}
+    #rightbar {float:left; background-color:pink; height:100px; width:20%; box-sizing: border-box;}
+    #footer {clear:both; display:block; content:'';}
+    #footer {background-color:red; height:50px; box-sizing: border-box;}
     </style>
 </head>
 
-<body>
+<body> 
     <h1>레이아웃 C1</h1>
 
     <div id="wrap">

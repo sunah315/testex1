@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>가변 레이아웃 B</title>
+    <style>
+    html, body, #wrap, #rightbar {height:100%;} /*모든 부모들에게 height:100%;*/
+    #leftbar {background-color:salmon; height:100%; box-sizing:border-box;}
+    #header {background-color:lightgreen; height:100px; box-sizing:border-box;}
+    #content {background-color:lightpink; height: calc(100% - 200px); box-sizing:border-box;}
+    #footer {background-color:lightsalmon; height:100px; box-sizing:border-box;}
+    #leftbar {float:left; width:40%; box-sizing:border-box;}
+    #rightbar {float:left; width:60%; box-sizing:border-box;}
+    #rightbar:after {clear:both; display:block; content:0'';}
+    </style>
 </head>
 
 <body>
@@ -27,4 +37,4 @@
     </div>
 </body>
 
-</html>
+</html>
